@@ -1,4 +1,4 @@
-package com.javatechie.spring.kafka.api;
+package com.rapidstar.spring.kafka.api;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

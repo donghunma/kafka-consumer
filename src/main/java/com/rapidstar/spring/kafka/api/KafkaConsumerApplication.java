@@ -1,4 +1,4 @@
-package com.javatechie.spring.kafka.api;
+package com.rapidstar.spring.kafka.api;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,13 +27,13 @@ public class KafkaConsumerApplication {
 		return userFromTopic;
 	}
 
-	@KafkaListener(groupId = "javatechie-1", topics = "javatechie", containerFactory = "kafkaListenerContainerFactory")
+	@KafkaListener(groupId = "rapidstar1", topics = "rapidstar", containerFactory = "kafkaListenerContainerFactory")
 	public List<String> getMsgFromTopic(String data) {
 		messages.add(data);
 		return messages;
 	}
 
-	@KafkaListener(groupId = "javatechie-2", topics = "javatechie", containerFactory = "userKafkaListenerContainerFactory")
+	@KafkaListener(groupId = "rapidstar2", topics = "rapidstar", containerFactory = "userKafkaListenerContainerFactory")
 	public User getJsonMsgFromTopic(User user) {
 		userFromTopic = user;
 		return userFromTopic;
